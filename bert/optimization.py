@@ -146,7 +146,7 @@ def create_bert_optimizer(loss, init_lr, num_train_steps, num_warmup_steps, use_
 
   return train_op, learning_rate
 
-class AdamWeightDecayOptimizer(tf.train.Optimizer):
+class AdamWeightDecayOptimizer(tf.keras.optimizers.Optimizer):
   """A basic Adam optimizer that includes "correct" L2 weight decay."""
 
   def __init__(self,
